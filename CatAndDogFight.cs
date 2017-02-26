@@ -27,7 +27,7 @@ public class Program
 				int dogAttack = dmgEnemy.Next(minDmg,maxDmg);
 				
 				if(catTurn){
-					Console.WriteLine("Cat Attack with {0}", catAttack);
+					Console.WriteLine("Cat Attack with {0} damages", catAttack);
 					hpDog -= catAttack;
 					Console.WriteLine("HP remaining for dog {0}", hpDog);
 					catTurn = false;
