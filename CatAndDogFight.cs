@@ -31,12 +31,20 @@ public class Program
 					hpDog -= catAttack;
 					Console.WriteLine("HP remaining for dog {0}", hpDog);
 					catTurn = false;
+					if(hpDog <= 0){
+						Console.WriteLine("Dog Dead");
+							catTurn= true;
+						}
 					if(!catTurn){
 						Console.WriteLine("Dog Attack with {0} damages", dogAttack);
 						
 						hpCat -= dogAttack;
 						Console.WriteLine("HP remaining for cat {0}", hpCat);
 						catTurn = true;
+						if(hpCat <= 0){
+						Console.WriteLine("Cat Dead");
+							catTurn= false;
+						}
 						
 					}
 					if(hpDog <= 0 || hpCat <= 0){
